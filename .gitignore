@@ -1,0 +1,76 @@
+# Dependências Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Arquivos de ambiente e configuração sensível
+.env
+.env.local
+.env.production
+.env.*.local
+*.key
+*.pem
+*.p12
+
+# Credenciais e chaves API
+credentials.json
+secrets.json
+config/secrets.json
+
+# Build e deploy
+dist/
+build/
+.cache/
+.wrangler/
+.mf/
+
+# Sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Arquivos temporários
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Coverage e testes
+coverage/
+.nyc_output/
+*.lcov
+
+# Cloudflare específico
+.dev.vars
+wrangler.toml.local
