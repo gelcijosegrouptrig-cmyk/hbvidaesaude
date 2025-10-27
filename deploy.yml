@@ -1,0 +1,43 @@
+# GitHub Actions - Deploy Automático para Cloudflare Pages
+# Toda vez que você fizer push para a branch main, o site será atualizado automaticamente!
+
+name: Deploy para Cloudflare Pages
+
+# Quando executar este workflow
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch: # Permite execução manual via GitHub
+
+# Permissões necessárias
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy para Cloudflare Pages
+    
+    steps:
+      # 1. Faz checkout do código
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      # 2. Deploy para Cloudflare Pages
+      - name: Deploy para Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: hbvidaesaude
+          directory: .
+          # gitHubToken: ${{ secrets.GITHUB_TOKEN }} # Opcional, para comentários em PRs
+          
+      # 3. Notificação de sucesso
+      - name: Deploy concluído
+        run: |
+          echo "✅ Deploy concluído com sucesso!"
+          echo "🌐 Site disponível em: https://hbvidaesaude.me"

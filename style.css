@@ -1,0 +1,1070 @@
+/* Custom Styles for HBVIDAESAUDE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, #0066CC 0%, #00A8E8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card hover effects */
+.specialty-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.specialty-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 102, 204, 0.15);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0066CC;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0052a3;
+}
+
+/* Menu Navigation Styles */
+.menu-link {
+    position: relative;
+    padding: 0.625rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-block;
+}
+
+.menu-link:hover {
+    color: #0066CC;
+    background-color: #EFF6FF;
+    border-color: #BFDBFE;
+    transform: translateY(-2px);
+}
+
+.menu-link:active {
+    transform: translateY(0);
+}
+
+/* Link do menu Planos (destacado) */
+.menu-link-destacado {
+    position: relative;
+    padding: 0.625rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: white;
+    background: linear-gradient(135deg, #0066CC 0%, #00A8E8 100%);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3);
+    display: inline-block;
+}
+
+.menu-link-destacado:hover {
+    background: linear-gradient(135deg, #0052a3 0%, #0090c9 100%);
+    box-shadow: 0 6px 12px rgba(0, 102, 204, 0.4);
+    transform: translateY(-2px);
+}
+
+.menu-link-destacado:active {
+    transform: translateY(0);
+}
+
+/* Efeito de sublinhado animado */
+.menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #0066CC;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.menu-link:hover::after {
+    width: 70%;
+}
+
+/* Button effects */
+button, a {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:active, a:active {
+    transform: scale(0.98);
+}
+
+/* Hero section animation */
+#inicio {
+    position: relative;
+    overflow: hidden;
+}
+
+#inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Search input focus effect */
+#search-specialty:focus {
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal backdrop blur */
+#appointment-modal {
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Icon animations */
+.fas, .far {
+    transition: all 0.3s ease;
+}
+
+.specialty-card:hover .fas {
+    transform: scale(1.2);
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive video container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* FAQ styles */
+.faq-item {
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question:hover {
+    background-color: #f9fafb;
+}
+
+.faq-answer {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.faq-answer:not(.hidden) {
+    max-height: 500px;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Stats counter styling */
+.counter {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0066CC;
+}
+
+/* Feature cards */
+.feature-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.feature-card:hover::before {
+    left: 100%;
+}
+
+/* Header shadow transition */
+header {
+    transition: box-shadow 0.3s ease;
+}
+
+/* Utility classes */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+}
+
+/* Print styles */
+@media print {
+    header, footer, #mobile-menu-btn {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Hero Section Mobile */
+    #inicio {
+        padding-top: 5rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    #inicio h2 {
+        font-size: 1.75rem !important;
+        line-height: 1.3;
+    }
+    
+    #inicio h3 {
+        font-size: 1.35rem !important;
+        line-height: 1.3;
+    }
+    
+    #inicio p {
+        font-size: 1rem !important;
+    }
+    
+    /* Specialty Cards Mobile */
+    .specialty-card {
+        padding: 1rem;
+    }
+    
+    .specialty-card h3 {
+        font-size: 0.95rem;
+    }
+    
+    /* Sections Spacing */
+    section {
+        padding: 3rem 0 !important;
+    }
+    
+    /* Titles Mobile */
+    h2 {
+        font-size: 1.875rem !important;
+    }
+    
+    h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Cards Grid Mobile */
+    .grid {
+        gap: 1rem !important;
+    }
+}
+
+@media (max-width: 640px) {
+    /* Smaller Mobile Devices */
+    #inicio h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    #inicio h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Counter */
+    .counter {
+        font-size: 2rem;
+    }
+    
+    /* Search Input */
+    #search-specialty {
+        font-size: 0.95rem;
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Buttons Mobile */
+    button, a {
+        font-size: 0.95rem !important;
+        padding: 0.75rem 1.5rem !important;
+    }
+    
+    /* Planos Card Mobile */
+    #planos .text-6xl {
+        font-size: 3rem !important;
+    }
+    
+    #planos .text-3xl {
+        font-size: 1.5rem !important;
+    }
+    
+    #planos .text-2xl {
+        font-size: 1.25rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra Small Devices */
+    body {
+        font-size: 14px;
+    }
+    
+    /* Hero Ultra Small */
+    #inicio h2 {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    #inicio h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.75rem;
+    }
+    
+    #inicio p {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Logo and Header */
+    header h1 {
+        font-size: 1.25rem !important;
+    }
+    
+    header p {
+        font-size: 0.65rem !important;
+    }
+    
+    header i.fa-heartbeat {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Sections Ultra Small */
+    section {
+        padding: 2rem 0 !important;
+    }
+    
+    /* Titles Ultra Small */
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Buttons Ultra Small */
+    button, a {
+        font-size: 0.875rem !important;
+        padding: 0.625rem 1.25rem !important;
+    }
+    
+    /* Cards Padding */
+    .p-6, .p-8 {
+        padding: 1rem !important;
+    }
+    
+    /* Footer Mobile */
+    footer {
+        padding: 2rem 0 !important;
+        font-size: 0.875rem;
+    }
+    
+    /* Modal Mobile */
+    #appointment-modal > div {
+        margin: 1rem;
+        padding: 1.5rem !important;
+    }
+    
+    /* Planos Section Mobile */
+    #planos .bg-gradient-to-br {
+        padding: 1.5rem !important;
+    }
+    
+    #planos button[type="submit"] {
+        width: 100%;
+        padding: 1rem !important;
+        font-size: 1rem !important;
+    }
+    
+    /* FAQ Grid Mobile */
+    #planos .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-link {
+    display: block;
+    padding: 0.875rem 1rem;
+    margin: 0.25rem 0.5rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:active {
+    background: #EFF6FF;
+    border-left-color: #0066CC;
+    color: #0066CC;
+    padding-left: 1.25rem;
+}
+
+/* Link Planos destacado no mobile */
+.mobile-menu-link-destacado {
+    display: block;
+    padding: 0.875rem 1rem;
+    margin: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(135deg, #0066CC 0%, #00A8E8 100%);
+    text-decoration: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.mobile-menu-link-destacado:hover,
+.mobile-menu-link-destacado:active {
+    background: linear-gradient(135deg, #0052a3 0%, #0090c9 100%);
+    box-shadow: 0 6px 12px rgba(0, 102, 204, 0.4);
+    transform: scale(1.02);
+}
+
+/* Mobile Menu Improvements */
+@media (max-width: 768px) {
+    #mobile-menu {
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 1rem 1rem;
+        padding: 0.5rem 0;
+        margin-top: 0.5rem;
+    }
+    
+    /* Header mobile optimization */
+    header {
+        padding: 0.75rem 0;
+    }
+    
+    header .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Specialty Grid Mobile Optimization */
+@media (max-width: 640px) {
+    #specialties-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .specialty-card {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    #specialties-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Mobile Touch Improvements */
+@media (hover: none) and (pointer: coarse) {
+    /* Touch devices */
+    button, a, .specialty-card {
+        -webkit-tap-highlight-color: rgba(0, 102, 204, 0.2);
+        touch-action: manipulation;
+    }
+    
+    /* Larger touch targets */
+    button, a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Remove hover effects on touch */
+    .specialty-card:hover {
+        transform: none;
+    }
+    
+    /* Active state for touch */
+    button:active, a:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+}
+
+/* Prevent text selection on buttons */
+button, .specialty-card {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* Better mobile input */
+input, textarea, select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Prevent overflow on mobile */
+body {
+    overflow-x: hidden;
+}
+
+/* Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flexible icons on mobile */
+@media (max-width: 640px) {
+    .fas, .far {
+        font-size: inherit;
+    }
+}
+
+/* Accessibility improvements */
+.focus-visible:focus {
+    outline: 2px solid #0066CC;
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #0066CC;
+    outline-offset: 2px;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .specialty-card {
+        border: 2px solid currentColor;
+    }
+    
+    button,
+    a {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment when implementing dark mode
+    body {
+        background-color: #1a202c;
+        color: #fff;
+    }
+    
+    .bg-white {
+        background-color: #2d3748;
+    }
+    
+    .text-gray-800 {
+        color: #e2e8f0;
+    }
+    */
+}
+
+/* Custom loading spinner */
+.spinner {
+    border: 3px solid rgba(0, 102, 204, 0.1);
+    border-top-color: #0066CC;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Toast notification styles */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: slideInRight 0.3s ease-out;
+    z-index: 1000;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.animate-slide-in {
+    animation: slideInRight 0.3s ease-out;
+}
+
+/* Section divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #0066CC, transparent);
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Payment Modal Styles */
+#payment-modal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#payment-modal > div {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.3s ease-out;
+}
+
+/* Scroll customizado para o modal */
+#payment-modal .overflow-y-auto::-webkit-scrollbar {
+    width: 8px;
+}
+
+#payment-modal .overflow-y-auto::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#payment-modal .overflow-y-auto::-webkit-scrollbar-thumb {
+    background: #0066CC;
+    border-radius: 4px;
+}
+
+/* Input focus styles */
+#payment-form input:focus,
+#payment-form select:focus {
+    border-color: #0066CC;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+/* Checkbox custom */
+#payment-form input[type="checkbox"]:checked {
+    background-color: #0066CC;
+    border-color: #0066CC;
+}
+
+/* Success message animation */
+#success-message {
+    animation: slideInRight 0.3s ease-out;
+}
+
+/* Payment Option Cards */
+.payment-option-card {
+    position: relative;
+}
+
+.payment-option-card > div {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-option-card > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.payment-option-card > div:hover::before {
+    left: 100%;
+}
+
+/* Modal mobile adjustments */
+@media (max-width: 640px) {
+    #payment-modal > div {
+        max-height: 95vh;
+        margin: 1rem;
+    }
+    
+    #payment-modal .p-6 {
+        padding: 1rem;
+    }
+    
+    #payment-modal .p-8 {
+        padding: 1.5rem;
+    }
+    
+    /* Payment cards em coluna no mobile */
+    .payment-option-card > div {
+        padding: 1.25rem;
+    }
+    
+    .payment-option-card h5 {
+        font-size: 1.125rem;
+    }
+    
+    .payment-option-card i.text-5xl {
+        font-size: 2.5rem;
+    }
+}
+
+/* Pricing card glow effect */
+#planos .bg-gradient-to-br {
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 102, 204, 0.4);
+}
+
+#planos .bg-gradient-to-br::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00A8E8, #0066CC, #00C9A7, #0066CC);
+    border-radius: 1.5rem;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: glowRotate 3s linear infinite;
+}
+
+#planos .bg-gradient-to-br:hover::before {
+    opacity: 1;
+}
+
+@keyframes glowRotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Payment button pulse */
+#planos button[type="submit"] {
+    animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+}
+
+#planos button[type="submit"]:hover {
+    animation: none;
+    transform: scale(1.05);
+}
+
+/* Price animation */
+#planos .text-6xl {
+    animation: priceScale 2s ease-in-out infinite;
+}
+
+@keyframes priceScale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Modal PIX Iframe Styles */
+#pix-payment-frame {
+    z-index: 60; /* Acima do modal de pagamento (z-50) */
+    animation: fadeIn 0.3s ease-out;
+}
+
+#pix-iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+#pix-payment-frame .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+}
+
+/* Responsividade do modal PIX para mobile */
+@media (max-width: 640px) {
+    #pix-payment-frame .max-w-4xl {
+        max-width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    #pix-payment-frame .rounded-2xl {
+        border-radius: 0;
+    }
+    
+    #pix-payment-frame .rounded-t-2xl {
+        border-radius: 0;
+    }
+    
+    #pix-payment-frame .rounded-b-2xl {
+        border-radius: 0;
+    }
+    
+    #pix-payment-frame .p-4 {
+        padding: 0;
+    }
+}
+
+/* Loading indicator para iframe */
+#pix-iframe:empty::after {
+    content: 'Carregando pagamento...';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.125rem;
+    color: #6b7280;
+}
+
+/* Header do modal PIX */
+#pix-payment-frame .bg-gradient-to-r {
+    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+/* Button close hover effect */
+#pix-payment-frame button[onclick="closePixPayment()"] {
+    transition: all 0.2s ease;
+}
+
+#pix-payment-frame button[onclick="closePixPayment()"]:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 0.25rem;
+}
+
+/* Modal CARD (Mercado Pago) Iframe Styles */
+#card-payment-frame {
+    z-index: 60; /* Acima do modal de pagamento (z-50) */
+    animation: fadeIn 0.3s ease-out;
+}
+
+#card-iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+#card-payment-frame .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+}
+
+/* Responsividade do modal Cartão para mobile */
+@media (max-width: 640px) {
+    #card-payment-frame .max-w-4xl {
+        max-width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    #card-payment-frame .rounded-2xl {
+        border-radius: 0;
+    }
+    
+    #card-payment-frame .rounded-t-2xl {
+        border-radius: 0;
+    }
+    
+    #card-payment-frame .rounded-b-2xl {
+        border-radius: 0;
+    }
+    
+    #card-payment-frame .p-4 {
+        padding: 0;
+    }
+}
+
+/* Loading indicator para iframe do cartão */
+#card-iframe:empty::after {
+    content: 'Carregando pagamento...';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.125rem;
+    color: #6b7280;
+}
+
+/* Header do modal Cartão */
+#card-payment-frame .bg-gradient-to-r {
+    background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+}
+
+/* Button close hover effect - Cartão */
+#card-payment-frame button[onclick="closeCardPayment()"] {
+    transition: all 0.2s ease;
+}
+
+#card-payment-frame button[onclick="closeCardPayment()"]:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 0.25rem;
+}
+
+
