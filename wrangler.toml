@@ -1,32 +1,5 @@
-# Configuração Cloudflare Pages para HBVIDAESAUDE
-# https://developers.cloudflare.com/pages/configuration/
-
 name = "hbvidaesaude"
-compatibility_date = "2024-01-27"
-
-# Tipo de projeto
-pages_build_output_dir = "."
+compatibility_date = "2025-11-02"
 
 [site]
-bucket = "."
-
-# Para Cloudflare Pages (site estático)
-# Não precisa de workers por enquanto
-
-# Se futuramente você quiser adicionar Cloudflare Workers:
-# [env.production]
-# name = "hbvidaesaude-production"
-# route = "hbvidaesaude.me/*"
-# 
-# [env.production.vars]
-# ENVIRONMENT = "production"
-
-# Se precisar de KV namespace no futuro:
-# [[kv_namespaces]]
-# binding = "SITE_DATA"
-# id = "SEU_KV_NAMESPACE_ID"
-
-# Configuração de build (para Cloudflare Pages via dashboard)
-# Build command: (vazio - site estático)
-# Build output directory: /
-# Root directory: /
+bucket = "./"
