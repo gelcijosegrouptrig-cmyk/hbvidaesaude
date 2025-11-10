@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaiNow Saúde - Plataforma de Benefícios em Saúde</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-heartbeat text-4xl"></i>
+                    <div>
+                        <h1 class="text-3xl font-bold">KaiNow Saúde</h1>
+                        <p class="text-sm opacity-90">Assistência à Saúde</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:underline">Início</a>
+                    <a href="#especialidades" class="hover:underline">Especialidades</a>
+                    <a href="#programas" class="hover:underline">Programas</a>
+                    <a href="#planos" class="hover:underline">Planos</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-6">
+                Cuidando da sua saúde com excelência
+            </h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                Consultas médicas online em 38 especialidades, programas especializados e um time de profissionais dedicados ao seu bem-estar.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#planos" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition">
+                    <i class="fas fa-rocket mr-2"></i>Começar Agora
+                </a>
+                <a href="#especialidades" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition">
+                    <i class="fas fa-stethoscope mr-2"></i>Ver Especialidades
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <i class="fas fa-user-md text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-2">38</h3>
+                    <p class="text-gray-600">Especialidades Médicas</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-heart text-5xl text-purple-600 mb-4"></i>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-2">6</h3>
+                    <p class="text-gray-600">Programas Especializados</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-clock text-5xl text-pink-600 mb-4"></i>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-2">24/7</h3>
+                    <p class="text-gray-600">Atendimento Disponível</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-shield-alt text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-2">100%</h3>
+                    <p class="text-gray-600">Seguro e Confiável</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades Section -->
+    <section id="especialidades" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Nossas Especialidades</h2>
+                <p class="text-xl text-gray-600">Consultas com especialistas qualificados</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Especialidade Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <i class="fas fa-heartbeat text-4xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Cardiologia</h3>
+                    <p class="text-gray-600 text-sm mb-4">Cuidados com o coração</p>
+                    <button class="text-blue-600 font-semibold hover:underline">
+                        Agendar consulta →
+                    </button>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <i class="fas fa-brain text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Neurologia</h3>
+                    <p class="text-gray-600 text-sm mb-4">Saúde do sistema nervoso</p>
+                    <button class="text-blue-600 font-semibold hover:underline">
+                        Agendar consulta →
+                    </button>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <i class="fas fa-user-md text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Clínica Médica</h3>
+                    <p class="text-gray-600 text-sm mb-4">Atendimento geral</p>
+                    <button class="text-blue-600 font-semibold hover:underline">
+                        Agendar consulta →
+                    </button>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <i class="fas fa-child text-4xl text-pink-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Pediatria</h3>
+                    <p class="text-gray-600 text-sm mb-4">Cuidados infantis</p>
+                    <button class="text-blue-600 font-semibold hover:underline">
+                        Agendar consulta →
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-gray-600 mb-4">E mais 34 especialidades disponíveis!</p>
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                    Ver todas as especialidades
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programas Section -->
+    <section id="programas" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Programas Especializados</h2>
+                <p class="text-xl text-gray-600">Cuidado personalizado para suas necessidades</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programa Card -->
+                <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-xl shadow-lg">
+                    <i class="fas fa-venus text-5xl text-pink-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">KaiNow Mulher</h3>
+                    <p class="text-gray-700 mb-4">Saúde integral da mulher com ginecologia, obstetrícia e orientação nutricional.</p>
+                    <button class="bg-pink-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-pink-700 transition">
+                        Saiba mais
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-100 to-blue-200 p-8 rounded-xl shadow-lg">
+                    <i class="fas fa-user-clock text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">KaiNow Sênior</h3>
+                    <p class="text-gray-700 mb-4">Cuidado completo para idosos com geriatria, cardiologia e acompanhamento contínuo.</p>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Saiba mais
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-100 to-green-200 p-8 rounded-xl shadow-lg">
+                    <i class="fas fa-pills text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">KaiNow Farma</h3>
+                    <p class="text-gray-700 mb-4">Descontos em farmácias e orientação farmacêutica completa.</p>
+                    <button class="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition">
+                        Saiba mais
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos Section -->
+    <section id="planos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Escolha seu Plano</h2>
+                <p class="text-xl text-gray-600">Planos acessíveis para toda a família</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Plano Individual -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-200 hover:border-blue-500 transition">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Individual</h3>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold text-blue-600">R$ 49,90</span>
+                        <span class="text-gray-600">/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Acesso a 38 especialidades</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Consultas ilimitadas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Atendimento 24/7</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Assinar Agora
+                    </button>
+                </div>
+                
+                <!-- Plano Familiar -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-xl border-4 border-blue-500 transform scale-105">
+                    <div class="bg-blue-600 text-white text-sm font-bold py-1 px-3 rounded-full inline-block mb-4">
+                        MAIS POPULAR
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Familiar</h3>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold text-blue-600">R$ 129,90</span>
+                        <span class="text-gray-600">/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Até 5 dependentes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Todos os benefícios Individual</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Programas especializados inclusos</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Assinar Agora
+                    </button>
+                </div>
+                
+                <!-- Plano Empresarial -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-200 hover:border-blue-500 transition">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Empresarial</h3>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold text-blue-600">Custom</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Planos corporativos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Gestão de colaboradores</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Relatórios personalizados</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Solicitar Orçamento
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">
+                        <i class="fas fa-heartbeat mr-2"></i>KaiNow Saúde
+                    </h3>
+                    <p class="text-gray-400">
+                        Transformando o acesso à saúde no Brasil com tecnologia e cuidado humano.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Especialidades</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Cardiologia</a></li>
+                        <li><a href="#" class="hover:text-white">Pediatria</a></li>
+                        <li><a href="#" class="hover:text-white">Dermatologia</a></li>
+                        <li><a href="#" class="hover:text-white">Ver todas</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Programas</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">KaiNow Mulher</a></li>
+                        <li><a href="#" class="hover:text-white">KaiNow Sênior</a></li>
+                        <li><a href="#" class="hover:text-white">KaiNow Farma</a></li>
+                        <li><a href="#" class="hover:text-white">Ver todos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            (11) 1234-5678
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            contato@kainow.com.br
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            WhatsApp
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 KaiNow Saúde. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
